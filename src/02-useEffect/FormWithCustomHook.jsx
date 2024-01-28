@@ -4,11 +4,12 @@ import { useForm } from "../../src/hooks/useForm";
 
 export const FormWithCustomHook = () => {
   /*A propriedade de nome name recebe o valor (value). Desta forma trata qualquer campo*/
-  const { formState, onInputChange, username, email, password } = useForm({
-    username: "",
-    email: "",
-    password: "",
-  });
+  const { formState, onInputChange, onResetForm, username, email, password } =
+    useForm({
+      username: "",
+      email: "",
+      password: "",
+    });
 
   console.log("formState: ", formState);
   // const { username, email, password } = formState;
@@ -43,6 +44,9 @@ export const FormWithCustomHook = () => {
         value={password}
         onChange={onInputChange}
       />
+      <button onClick={onResetForm} className="btn btn-primary mt-2">
+        Limpar
+      </button>
       <hr />
     </>
   );
