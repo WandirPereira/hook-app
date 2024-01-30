@@ -7,8 +7,10 @@ export const useForm = (initialForm = {}) => {
 
   const onInputChange = ({ target }) => {
     const { name, value } = target;
-    console.log({ name, value });
+    // console.log({ name, value });
     setFormState({ ...formState, [name]: value });
+    //name é o nome do campo
+    //e [name] permite atribuir um valor ao campo
   };
 
   const onResetForm = () => {
