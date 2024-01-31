@@ -9,3 +9,7 @@ button {
 .btn {
   border: 2px solid black;
 }
+
+a {
+  margin-right: 15px;
+}
